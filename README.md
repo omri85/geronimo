@@ -47,6 +47,7 @@ Now the index is ready and you can search using the *search* API:
 
 Body params:
 * "field" [string] - the json field you want to query. (mandatory)
+* "output" [string] - comma saperated list of the json field names to retrieve (mandatory)
 * "term" [string] - the term you want to look up (mandatory)
 * "limit" [int] - limit the number of results (optional, default=10, max=100)
 * "isRegex" [boolean] - true if the term is a regular expression (optional, default=false)
@@ -60,7 +61,8 @@ Payload:
   "field": "name",
   "author": "lewis",
   "limit": 1,
-  "isRegex": false
+  "isRegex": false,
+  "output": "name,author"
 }
 
 Pricing:  0.087$ per 1,000 calls.
